@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../grid-guide.css">
+  <style>
+    .boxA:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box1 {
+      float: left;
+      width: 50%;
+    }
+    .box2 {
+      float: left;
+      width: 50%;
+    }
+  </style>
+  <title>박스 분할</title>
+</head>
+<body>
+  <div class="boxA">
+    <!-- 박스를 분할 -->
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+  </div>
+</body>
+</html>
