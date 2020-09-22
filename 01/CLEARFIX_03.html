@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./grid-guide.css">
+  <style>
+    .boxA {
+      border: solid 8px #00A0E9;
+      background-color: #A0E0FE;
+      color: #00A0E9;
+    }
+    .boxA:after {
+      content: 'BOX A 내부에 출력을 확인하기 위해 넣은 글자입니다.';
+      display: block;
+      /* 
+        BOX4가 BOX2, 3의 뒤를 파고드는 것을 막으려면 BOX A 내부 글자가
+        오른쪽에 들어가는 것을 막는다. 그 방법은 아래의 claer속성을 both로 하면 된다.
+      */
+      clear: both;
+    }
+
+    /* BOX2, BOX3 가로정렬 */
+    .box2 {
+      float: left;
+    }
+    .box3 {
+      float: left;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="box1">BOX1</div>
+  <div class="boxA">
+    <!-- 
+      BOX2, 3은 플로팅 박스가 된다. 
+      따라서 다른 박스로 부터 존재하지 않는 것으로 취급이 된다.
+      BOX A로 부터 BOX2, 3은 밀려나오고, BOX4가 BOX2, 3을 밀고 들어오게 된다.
+      다만, 박스 내부의 글자는 플로팅 박스와 중첩되지 않게 된다.
+    -->
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+  </div>
+  <div class="box4">BOX4</div>
+</body>
+</html>
