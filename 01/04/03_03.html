@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>컬럼 탈락을 사용할 때의 주의 사항</title>
+  <link rel="stylesheet" href="../grid-guide.css">
+  <style>
+    .boxA:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box1 {
+      float: left;
+      width: 50%;
+      /* BOX3의 위치가 오른쪽으로 출력되는 문제가 발생 */
+      height: 280px;
+    }
+    .box2 {
+      float: left;
+      width: 50%;
+    }
+    .box3 {
+      float: left;
+      width: 50%;
+      /* clear 속성을 both로 지정하면 오른쪽으로 출력되는 문제를 제거와 동시에 개행 가능 */
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="boxA">
+    <div class="box1">BOX1 - 50% X 280px</div>
+    <div class="box2">BOX2 - 50%</div>
+    <!-- 100% 넘을 경우 탈락현상이 발생한다. -->
+    <div class="box3">BOX3 - 50%</div>
+  </div>
+  <div class="box4">BOX4</div>
+</body>
+</html>

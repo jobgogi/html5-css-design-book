@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한쪽 박스의 너비를 픽셀로 고정</title>
+  <link rel="stylesheet" href="../grid-guide.css">
+  <style>
+    .boxA:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box2 {
+      float: left;
+      width: 300px;
+    }
+    .box3 {
+      /* 플로팅 박스가 아닌 것으로 한다. BOX2의 아래로 들어가게 됨 */
+      float: none;
+      /* BOX3가 화면의 너비를 채워 출력하게 된다. */
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">BOX1</div>
+  <div class="boxA">
+    <div class="box2">BOX2</div>
+    <div class="box3">
+      <p>BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3</p>
+    </div>
+  </div>
+  <div class="box4">BOX4</div>
+</body>
+</html>

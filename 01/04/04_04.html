@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한쪽 박스의 너비를 픽셀로 고정</title>
+  <link rel="stylesheet" href="../grid-guide.css">
+  <style>
+    .boxA:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box2 {
+      float: left;
+      width: 300px;
+    }
+    .box3 {
+      float: left;
+      width: calc(100% - 300px);
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">BOX1</div>
+  <div class="boxA">
+    <div class="box2">BOX2</div>
+    <div class="box3">
+      <p>BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3</p>
+    </div>
+  </div>
+  <div class="box4">BOX4</div>
+</body>
+</html>
