@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 디지인 기본 STEP01</title>
+  <link rel="stylesheet" href="../grid-guide-rwd.css">
+  <style>
+    @media (min-width: 768px) {
+      .boxA:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .box2 {
+        float: left;
+        width: 70%;
+      }
+      .box3 {
+        float: left;
+        width: 30%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">BOX1</div>
+  <div class="boxA">
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+  </div>
+</body>
+</html>

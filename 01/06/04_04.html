@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스를 겹쳐 올리는 레이아웃 STEP 03</title>
+  <link rel="stylesheet" href="../grid-guide.css">
+  <style>
+    .boxA {
+      border: solid 8px #00A0E9;
+      background-color: #A0E0FE;
+      color: #00A0E9;
+    }
+    .boxA .box1 {
+      border: solid 8px #E0E03D;
+      background-color: #FFFFEE;
+      color: #E0E03D;
+      line-height: 200px;
+    }
+    .boxA .box2 {
+      border: solid 8px #EB6877;
+      background-color: #FFC2C9;
+      color: #EB6877;
+      line-height: 100px;
+    }
+    /* 박스를 중첩하는 설정 */
+    .boxA { position: relative; }
+    .box2 {
+      position: absolute;
+      top: 150px;
+      left: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="boxA">
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+[class^="box"],
+div:not([class]) 
+{
+  border: solid 8px #FAA;
+  color: #FAA;
+  background-color: #FEE;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  text-align: center;
+  line-height: 200px;
+  font-family: Verdata, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+body > div:not([class]) 
+{
+  min-height: 200px;
+}
+
+[class^="box"] > *:not([class^="box"])
+{
+  min-height: 0;
+  line-height: 1.5;
+  color: #000;
+  font-size: 14px;
+  font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+/* BOX A를 테두리로 둘러싸지 않도록 설정 */
+.boxA {
+  border: none;
+  background: none;
+  line-height: normal;
+  text-align: left;
+}
+
+/* 박스마다 색을 변경하는 설정 */
+.box1 {
+  border-color: #FFAAAA;
+  color: #FFAAAA;
+  background-color: #FFEEEE;
+}
+.box2 {
+  border-color: #E0E03D;
+  color: #E0E03D;
+  background-color: #FFEEEE;
+}
+.box3 {
+  border-color: #65C5CF;
+  color: #65C5CF;
+  background-color: #B2EAF1;
+}
+.box4 {
+  border-color: #82D99F;
+  color: #82D99F;
+  background-color: #C4F6D4;
+}
+.boxB {
+  border-color: #B236AB;
+  color: #B236AB;
+  background-color: #FFCCFC;
+}
+
+/* 박스의 높이 */
+@media (min-width: 768px) {
+  .box2 {
+    line-height: 400px;
+  }
+  .box3 {
+    line-height: 400px;
+  }
+  .box4 {
+    line-height: 400px;
+  }
+
+  .boxB .box2,
+  .boxB .box3 {
+    line-height: 384px;
+  }
+}
