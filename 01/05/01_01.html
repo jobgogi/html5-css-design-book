@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../grid-guide-narabi.css">
+  <title>박스 정렬 순서 지정 STEP01</title>
+  <style>
+    .boxA:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box1 {
+      float: left;
+      width: 25%;
+    }
+    .box2 {
+      float: left;
+      width: 25%;
+    }
+    .box3 {
+      float: left;
+      width: 25%;
+    }
+    .box4 {
+      float: left;
+      width: 25%;
+    }
+  </style>
+</head>
+<body>
+  <!-- float 속성을 이용하면 박스 정렬 순서를 쉽게 바꿀 수 있다. -->
+  <div class="boxA">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+  </div>
+</body>
+</html>
