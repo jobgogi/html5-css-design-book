@@ -222,6 +222,17 @@ body {
   margin-bottom: 20px;
 }
 
+/* 본문 (멀티 컬럼 기능 만들기) */
+.story-body {
+  margin-top: 40px;
+  -moz-column-count: 2;
+  -moz-column-gap: 40px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 40px;
+  column-count: 2;
+  column-gap: 40px;
+}
+
 /* 기사 > 사이드 메뉴 */
 .sidemenu {
   border: solid 6px #DDDDDD;
